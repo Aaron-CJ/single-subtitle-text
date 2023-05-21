@@ -1,0 +1,46 @@
+plugins {
+    // Java插件，该插件提供了Java应用和库的基本功能
+    id 'java'
+
+    // lombok插件，该插件支持在Java项目中使用Lombok注解
+    id 'io.freefair.lombok' version '8.0.1'
+}
+
+group = 'pers.lcj.tool'
+version = '1.0.0'
+
+repositories {
+    mavenLocal {
+        url 'file:///D:/m2/repository'
+    }
+    maven { url 'https://maven.aliyun.com/repository/public/' }
+    mavenCentral()
+}
+
+dependencies {
+    // Lombok
+    compileOnly 'org.projectlombok:lombok:1.18.26'
+    annotationProcessor 'org.projectlombok:lombok:1.18.26'
+
+    // Log4j2
+    implementation 'org.apache.logging.log4j:log4j-api:2.20.0'
+    implementation 'org.apache.logging.log4j:log4j-core:2.20.0'
+    implementation 'org.apache.logging.log4j:log4j-slf4j-impl:2.20.0'
+
+    // JUnit 5
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.3'
+}
+
+jar {
+    duplicatesStrategy = 'exclude'
+    from {
+        configurations.compileClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    manifest {
+        attributes 'Main-Class': 'pers.lcj.tool.Main'
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
