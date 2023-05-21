@@ -38,9 +38,9 @@ https://pearocr.com/#/
 
 上传RGBImages所有图片识别完后导出为txt。(如果后续出现问题，文件路径及文件名不建议带有中文)
 
-接下来是我开发的小工具（代码已开源到github上），下载地址如下，
+接下来是我开发的小工具，地址如下：
 
-Release single-subtitle-text-1.0 · LCJamI/single-subtitle-text · GitHub
+https://github.com/LCJamI/single-subtitle-text/releases/tag/1.0.0
 
 下载single-subtitle-text_win-x64.zip解压，看到single-subtitle-text_win-x64.exe。
 
