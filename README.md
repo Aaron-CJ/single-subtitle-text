@@ -1,6 +1,6 @@
 jre-17.0.7_win-x64的生成方式：
 
-以管理员方式运行PowerShell：
+以管理员方式运行PowerShell执行命令：
 
 cd $env:JAVA_HOME
 
@@ -9,6 +9,10 @@ jlink --no-header-files --no-man-pages --compress=2 --strip-debug --add-modules 
 内部参数：
 
 java -Dfile.encoding=UTF-8 -jar single-subtitle-text-1.0.0.jar
+
+也可到本人博客查看教程：
+
+https://blog.csdn.net/CJ_L1995/article/details/130577720
 
 使用教程：
 
